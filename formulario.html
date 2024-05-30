@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div>
+        <h1>Tela de marcar consulta</h1>
+    </div>
+
+    <div id="abas">
+        <ul>
+            <li><a href="tela.html">Consultar consultas</a></li>
+            <li><a href="#">Marcar consulta</a></li>
+            <li><a href="#">Baixar prontuário</a></li>
+        </ul>
+    </div>
+
+    <div>
+        <form action="">
+
+            <div>
+                <label for="convenio">Convênio</label> <br>
+                <input type="radio" name="convenio" value="sim">
+                <label for="sim">Sim</label>
+                <input type="radio" name="convenio" value="nao">
+                <label for="nao">Não</label> <br>
+            </div>
+            
+            <div>
+                <label for="especialidade">Especialidade</label> <br>
+                <input list="especialidade" name="especialidade">
+                <datalist id="especialidade">
+                    <option value="Cardiologia">
+                    <option value="Ortopedia">
+                    <option value="Endocrinologia">
+                    <option value="Clínica Geral">
+                    <option value="Dermatologia">
+                </datalist> <br>
+            </div>
+
+            <div>
+                <label for="local">Clínica</label> <br>
+                <input list="local" name="local">
+                <datalist id="local">
+                    <option value="AtendaMais">
+                    <option value="GeralDF">
+                    <option value="OrtoMed">
+                </datalist> <br>
+                
+            </div>
+
+            <div>
+                <label for="polo">Polo</label> <br>
+                <input list="polo" name="polo">
+                <datalist id="polo">
+                    <option value="Asa Sul">
+                    <option value="Asa Norte">
+                    <option value="Guará">
+                </datalist> <br>
+            </div>
+
+            <div>
+                <label for="medico">Médico</label> <br>
+                <input list="medico" name="medico">
+                <datalist id="medico">
+                    <option value="Dr Magalhães">
+                    <option value="Dr Magalhães">
+                    <option value="Dr Magalhães">
+                </datalist> <br>
+            </div>
+
+            <div>
+                <label for="data">Data</label> <br>
+                <input type="date" name="data" id="data"> <br>
+            </div>
+            
+            <div><p></p></div>
+
+            <div>
+                <button type="submit">Agendar</button> <br>
+            </div>
+
+        
+
+        </form>
+    </div>
+</body>
+</html>
