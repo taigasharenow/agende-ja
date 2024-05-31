@@ -1,0 +1,13 @@
+div#conteiner {
+    border: 1px red solid;
+    margin-top: 2%;
+}
+
+div h1 {
+    text-align: center;
+}
+
+div {
+    margin: auto;
+    align-content: center;
+}
