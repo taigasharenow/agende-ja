@@ -3,90 +3,102 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <title>Document</title>
 </head>
 <body>
     
-    <div>
-        <h1>Tela de marcar consulta</h1>
-    </div>
-
-    <div id="abas">
-        <ul>
-            <li><a href="tela.html">Consultar consultas</a></li>
-            <li><a href="#">Marcar consulta</a></li>
-            <li><a href="#">Baixar prontuário</a></li>
-        </ul>
-    </div>
-
-    <div>
-        <form action="">
-
-            <div>
-                <label for="convenio">Convênio</label> <br>
-                <input type="radio" name="convenio" value="sim">
-                <label for="sim">Sim</label>
-                <input type="radio" name="convenio" value="nao">
-                <label for="nao">Não</label> <br>
-            </div>
-            
-            <div>
-                <label for="especialidade">Especialidade</label> <br>
-                <input list="especialidade" name="especialidade">
-                <datalist id="especialidade">
-                    <option value="Cardiologia">
-                    <option value="Ortopedia">
-                    <option value="Endocrinologia">
-                    <option value="Clínica Geral">
-                    <option value="Dermatologia">
-                </datalist> <br>
-            </div>
-
-            <div>
-                <label for="local">Clínica</label> <br>
-                <input list="local" name="local">
-                <datalist id="local">
-                    <option value="AtendaMais">
-                    <option value="GeralDF">
-                    <option value="OrtoMed">
-                </datalist> <br>
-                
-            </div>
-
-            <div>
-                <label for="polo">Polo</label> <br>
-                <input list="polo" name="polo">
-                <datalist id="polo">
-                    <option value="Asa Sul">
-                    <option value="Asa Norte">
-                    <option value="Guará">
-                </datalist> <br>
-            </div>
-
-            <div>
-                <label for="medico">Médico</label> <br>
-                <input list="medico" name="medico">
-                <datalist id="medico">
-                    <option value="Dr Magalhães">
-                    <option value="Dr Magalhães">
-                    <option value="Dr Magalhães">
-                </datalist> <br>
-            </div>
-
-            <div>
-                <label for="data">Data</label> <br>
-                <input type="date" name="data" id="data"> <br>
-            </div>
-            
-            <div><p></p></div>
-
-            <div>
-                <button type="submit">Agendar</button> <br>
-            </div>
-
+    <div id="container">
+        <div>
+            <h1>Tela de marcar consulta</h1>
+        </div>
+    
+        <div id="tela" style="width: 40%;">
+            <nav class="navbar navbar-expand-lg bg-body-tertiary">
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item"><a class="nav-link" href="consultar.html">Consultar consultas</a></li>
+                        <li class="nav-item"><a class="nav-link" href="formulario.html">Marcar consulta</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Baixar prontuário</a></li>
+                    </ul>
+                </div>
+            </nav>
         
+            <div id="tela">
+                <form action="" class="row g-3">
 
-        </form>
+                    <div class="col-md-3"> 
+                        <legend class="col-form-label">Convênio</legend> 
+                    </div> 
+                    <div class="col-md-4"> 
+                        <div class="form-check"> 
+                            <input class="form-check-input" type="radio" name="convenio" id="sim" value="sim" required> 
+                            <label class="form-check-label" for="sim">Sim</label>
+                        </div> 
+                    </div> 
+                    <div class="col-md-4"> 
+                        <div class="form-check"> 
+                            <input class="form-check-input" type="radio" name="convenio" id="nao" value="nao" required> 
+                            <label class="form-check-label" for="nao">Não</label> 
+                        </div>
+                    </div>
+        
+                    <div class="col-md-12">
+                        <label for="especialidade" class="form-label">Especialidade</label>
+                        <select id="especialidade" class="form-select">
+                            <option selected>Selecione...</option>
+                            <option value="Cardiologia">Cardiologia</option>
+                            <option value="Ortopedia">Ortopedia</option>
+                            <option value="Endocrinologia">Endocrinologia</option>
+                            <option value="Clínica Geral">Clínica Geral</option>
+                            <option value="Dermatologia">Dermatologia</option>
+                        </select>
+                    </div>
+        
+                    <div class="col-md-6">
+                        <label for="local" class="form-label">Clínica</label>
+                        <select id="local" class="form-select">
+                            <option selected>Selecione...</option>
+                            <option value="AtendaMais"> AtendaMais</option>
+                            <option value="GeralDF"> GeralDF</option>
+                            <option value="OrtoMed"> OrtoMed</option>
+                            </select>
+                        
+                    </div>
+        
+                    <div class="col-md-6"> 
+                        <label for="polo" class="form-label">Polo</label>
+                        <select id="polo" class="form-select">
+                            <option selected>Selecione...</option>
+                            <option value="asasul">Asa Sul</option>
+                            <option value="asanorte">Asa Norte</option>
+                            <option value="guara">Guará</option>
+                        </select>
+                    </div>
+        
+                    <div class="col-md-6">
+                        <label for="medico" class="form-label">Médico</label> <br>
+                        <select id="polo" class="form-select">
+                            <option selected>Selecione...</option>
+                            <option value="beltrano">Dr Beltrano</option>
+                            <option value="rosa">Dra Rosa</option>
+                            <option value="magalhaes">Dr Magalhães</option>
+                        </select>
+                    </div>
+        
+                    <div class="col-md-6">
+                        <label for="data" class="form-label">Data</label>
+                        <input type="date" name="data" class="form-control">
+                    </div>
+        
+                    <div class="d-grid gap-2 col-6 mx-auto">
+                        <button class="btn btn-primary" type="submit">Agendar</button>
+                    </div>
+        
+                </form>
+            </div>
+        </div>
     </div>
 </body>
 </html>
